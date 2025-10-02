@@ -1,0 +1,22 @@
+name: Min första workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Kör ett enkelt kommando
+      run: echo "Hej från GitHub Actions!"
+    
+    - name: Kör flera kommandon
+      run: |
+        echo "Rad 1"
+        echo "Rad 2"
